@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewData["Title"]</title>
+    <link href="~/css/StyleSheet.css" rel="stylesheet" />
+</head>
+<body>
+    <header>
+        <h1>Welcome to my Lab3</h1>
+        <h2>My name is: Torres, Godswin</h2>
+       <br />
+        @Html.ActionLink("Home", "Index", "Home")
+        @Html.ActionLink("Show the song!", "SongForm", "Home")
+        @Html.ActionLink("Students", "CreateStudent", "Home")
+       
+    </header>
+    <div>
+        @RenderBody()
+    </div>
+    <footer>CSS used here is the same css file provided from the sample. Layout defines the general style of the webpage. This will be shared in the entire project</footer>
+</body>
+</html>

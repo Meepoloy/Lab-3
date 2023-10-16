@@ -1,0 +1,37 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    Layout = "_Layout";
+    ViewData["Title"] = "CreateStudent";
+}
+<h1>Create Your Favorite Student</h1>
+<form asp-controller="Home" asp-action="DisplayStudent" method="post">
+    <table>
+        <tr>
+            <td>First Name:</td>
+            <td><input type="text" name="firstName" required /></td>
+        </tr>
+        <tr>
+            <td>Last Name:</td>
+            <td><input type="text" name="lastName" required /></td>
+        </tr>
+        <tr>
+            <td>Student:</td>
+            <td><input type="number" name="studId" min="0" required/></td>
+        </tr>
+        <tr>
+            <td>Email Address:</td>
+            <td><input type="email" name="emailAdd" required /></td>
+        </tr>
+        <tr>
+            <td>Password:</td>
+            <td><input type="password" name="password" required /></td>
+        </tr>
+        <tr>
+            <td>Description:</td>
+            <td><input type="text" name="description" required /></td>
+        </tr>
+    </table>
+    <input type="submit" value="Create" />
+</form>

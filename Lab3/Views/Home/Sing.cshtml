@@ -1,0 +1,74 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@using Microsoft.AspNetCore.Http;
+@{
+    Layout = "_Layout";
+    ViewData["Title"] = "Sing";
+}
+<form asp-controller="Home" asp-action="SongForm" method="get">
+    <button type="submit">Play Again</button>
+
+</form>
+@{
+    int monkeyNum;
+    if (int.TryParse(@Context.Session.GetString("inputNum"), out monkeyNum))
+    {
+        string subject = "monkeys";
+        string oneOrNone = "One";
+        string pronoun;
+        string[] message = new string[4];
+        message[2] = "Mama called the doctor and the doctor said";
+        message[3] = "\"No more monkeys jumping on the bed!\"";
+
+        string docSays = "\"No more monkeys jumping on the bed!\"\n\n\n";
+
+        while (monkeyNum >= 0)
+        {
+            if (monkeyNum == 1)
+            {
+                subject = "monkey";
+                oneOrNone = "He";
+                pronoun = "his";
+            }
+            else if (monkeyNum == 0)
+            {
+                subject = "monkeys";
+                oneOrNone = "None";
+                pronoun = "her";
+                message[3] = "\"Put those monkeys back in bed!\"";
+
+            }
+            else
+            {
+                if (monkeyNum % 2 == 0) //Even, her
+                {
+                    pronoun = "her";
+
+                }
+                else //odd, his
+                {
+                    pronoun = "his";
+                }
+            }
+            message[0] = monkeyNum + " little " + subject + " jumping on the bed";
+            message[1] = oneOrNone + " fell off and bumper " + pronoun + " head";
+
+            <p>
+                @foreach (string line in message)
+                {
+                @line<br>
+                }
+            </p>
+            <br>
+            monkeyNum--;
+        }        
+    }
+    else
+    {
+        // The conversion failed
+        //Impossible to happen
+        <h3>Failed!!!</h3>
+
+    }
+}

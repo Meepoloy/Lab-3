@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "Hash": "ySysg1Bw46szHfmNN4d2VFpdIgMPrTrhO8f7zJfVVgY=",
+  "Source": "Lab3",
+  "BasePath": "_content/Lab3",
+  "Mode": "Default",
+  "ManifestType": "Publish",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "Lab3\\wwwroot",
+      "Source": "Lab3",
+      "ContentRoot": "C:\\Users\\godsw\\Documents\\SchoolStuffs\\Level5\\Net Enterprise C#\\Labs\\Lab3\\Lab3\\wwwroot\\",
+      "BasePath": "_content/Lab3",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\godsw\\Documents\\SchoolStuffs\\Level5\\Net Enterprise C#\\Labs\\Lab3\\Lab3\\wwwroot\\css\\StyleSheet.css",
+      "SourceId": "Lab3",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\godsw\\Documents\\SchoolStuffs\\Level5\\Net Enterprise C#\\Labs\\Lab3\\Lab3\\wwwroot\\",
+      "BasePath": "_content/Lab3",
+      "RelativePath": "css/StyleSheet.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\StyleSheet.css"
+    }
+  ]
+}
